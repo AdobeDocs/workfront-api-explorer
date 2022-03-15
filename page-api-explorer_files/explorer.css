@@ -1,0 +1,158 @@
+.objects-ul li:nth-child(even) {
+    background-color:#f9f9f9;
+}
+.ng-cloak{
+    display: none;
+}
+.filter{
+    margin-top: -10px;
+}
+.filter input{
+    width: 200px;
+}
+.filter select{
+    display: inline-block;
+    float: right;
+}
+
+.results{
+    font-family: Helvetica, Verdana, sans-serif;
+}
+
+li{
+    list-style-type:none;
+}
+
+ul{
+    list-style-type:none;   
+}
+
+ul.objects-ul{
+    padding-left: 0px;
+}
+ul.objects-ul li.objects-li{
+    border-top: 1px solid #ccc;
+    padding: 12px 5px 10px;
+    list-style: none outside none;
+    cursor: pointer;
+}
+ul.objects-ul li.objects-li:last-child{
+    border-bottom: 1px solid #ccc;
+}
+ul.objects-ul li.objects-li.active:hover  {
+    background-color: white;
+}
+ul.objects-ul li.objects-li.active div > .label {
+    font-weight: bold;
+    margin-top: 6px;
+    display: inline-block;
+}
+ul.objects-ul li.objects-li.active div > .value {
+    margin-top: 6px;
+}
+ul.objects-ul li.objects-li:hover, ul.objects-ul li.objects-li.loading {
+    background-color: #F9F9F9;
+}
+
+ul.objects-ul li.objects-li:hover div > .label, ul.objects-ul li.objects-li.loading div > .label {
+    font-weight: bold;
+}
+
+ul.metadata-ul{
+    float: right;
+    border-bottom: solid 1px #666666s;
+}
+ul.metadata-ul li.metadata-li{
+    float: left;
+    margin: 0 5px;
+    color: #888;
+    padding: 5px 5px;
+}
+ul.metadata-ul li.metadata-li.active span {
+    color: black;
+}
+ul.metadata-ul li.metadata-li span:hover {
+    color: black;
+}
+ul.metadata-ul li.metadata-li.active{
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: -1px;
+    position: relative;
+    border-left: solid 1px #666;
+    border-right: solid 1px #666;
+    border-top: solid 1px #666;
+    border-radius: 5px 5px 0 0;
+}
+.metadata-content{
+    border: 1px solid #666666;
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+span.object-link {
+    color: blue;
+    cursor: pointer;
+}
+
+/*span.object-loading{*/
+    /*In the PHP file page-api-explorer.php*/
+/*}*/
+
+ul.info{
+    margin-bottom: 5px;
+    padding: 5px;
+    cursor: default;
+}
+div.info-row{
+    padding: 1px;
+}
+
+li.metadata-list-li{
+    padding: 7px 5px 5px 5px;
+    border-bottom: solid 1px gray;
+}
+li.metadata-list-li:last-child {
+    border-bottom: none;
+}
+
+.objcode{
+    width: 90px;
+}
+.label{
+    color: #111111;
+}
+.value{
+    float: right;
+    font-style: italic;
+    color: #888888;
+    text-align: right;
+}
+
+span.info-label{
+    vertical-align: top;
+    display: inline-block;
+    font-style: italic;
+    padding-right:5px;
+    text-align: right;
+    width: 150px;
+    font-size: 13px;
+}
+.info-value{
+    font-size: 13px;
+}
+span.info-value{
+    font-weight: bold;
+}
+ul.info-value{
+    display: inline-block;
+    padding: 0px;
+}
+
+div.blank{
+    color: #CCCCCC;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0 25px 100px;
+}
