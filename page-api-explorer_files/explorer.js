@@ -25,7 +25,7 @@ app.factory("APIObjectsService", function($http) {
     var returnObj = {};
 
     returnObj.populateObjectMetadata = function(scope, object) {
-        $http.get("https://api-cl01.my.workfront.com/attask/api" + scope.apiversion + "/" + object.objCode + "/metadata").then(function(response) {
+        $http.get("/attask/api" + scope.apiversion + "/" + object.objCode + "/metadata").then(function(response) {
             const objectData = response.data.data;
             var metadata = {};
             metadata.fields = objectData.fields;
@@ -47,7 +47,7 @@ app.factory("APIObjectsService", function($http) {
     };
 
     returnObj.populateObjects = function(scope) {
-        $http.get("https://api-cl01.my.workfront.com/attask/api" + scope.apiversion + "/metadata").then(function(response) {
+        $http.get("/attask/api" + scope.apiversion + "/metadata").then(function(response) {
             const responseObjects = response.data.data.objects;
             scope.objects = {};
             for (var key in responseObjects) {
