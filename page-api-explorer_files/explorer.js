@@ -25,8 +25,11 @@ app.factory("APIObjectsService", function($http) {
     var returnObj = {};
 
     returnObj.populateObjectMetadata = function(scope, object) {
-        $http.get("/attask/api" + scope.apiversion + "/" + object.objCode + "/metadata").then(function(response) {
+        $http.get("./attask/api" + scope.apiversion + "/" + object.objCode + "/metadata.json").then(function(response) {
+            console.log('obj', object);
+            consoel.log('res', response);
             const objectData = response.data.data;
+            consoel.log('objDate', objectData);
             var metadata = {};
             metadata.fields = objectData.fields;
             metadata.references = objectData.references;
@@ -47,7 +50,7 @@ app.factory("APIObjectsService", function($http) {
     };
 
     returnObj.populateObjects = function(scope) {
-        $http.get("/attask/api" + scope.apiversion + "/metadata").then(function(response) {
+        $http.get("./attask/api" + scope.apiversion + "/metadata.json").then(function(response) {
             const responseObjects = response.data.data.objects;
             scope.objects = {};
             for (var key in responseObjects) {
