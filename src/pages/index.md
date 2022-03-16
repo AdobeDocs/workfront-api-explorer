@@ -1,4 +1,4 @@
 ---
 frameSrc: /page-api-explorer.html
-frameHeight: 100%
+frameHeight: calc(100vh - 436.5px)
 ---
