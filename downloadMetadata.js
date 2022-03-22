@@ -1,19 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 const path = require('path');
-
-var download = function(url, dest, cb) {
-  var file = fs.createWriteStream(dest);
-  var request = http.get(url, function(response) {
-    response.pipe(file);
-    file.on('finish', function() {
-      file.close(cb);  // close() is async, call cb after close completes.
-    });
-  }).on('error', function(err) { // Handle errors
-    fs.unlink(dest); // Delete the file async. (But we don't check the result)
-    if (cb) cb(err.message);
-  });
-};
+const download = require('download');
 
 const directoryPath = path.join(__dirname, 'static/attask/api');
 
@@ -68,8 +56,11 @@ fs.readFile(result[0], "utf8", (err, jsonString) => {
 
         let downloadPath = result[0].split('/metadata.json')[0] + '/' + code + '.json';
 
-        console.log(`download ${apiInnerValue} to ${downloadPath}`)
-        download(apiInnerValue, )
+        console.log(`download ${apiInnerValue} to ${downloadPath}`);
+        
+        (async () => {
+          fs.writeFileSync(downloadPath, await download(apiInnerValue));
+        })();
       }
     }
   }
