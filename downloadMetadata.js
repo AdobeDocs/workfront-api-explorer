@@ -14,9 +14,6 @@ const getAllFiles = dir =>
 
 var result = getAllFiles(directoryPath);
 
-console.log(result);
-console.log();
-
 result.forEach(apiMetaFile => {
   if(apiMetaFile.indexOf('.json' >= 0)){
     fs.readFile(apiMetaFile, "utf8", (err, jsonString) => {
@@ -30,8 +27,6 @@ result.forEach(apiMetaFile => {
       for (let [apiKey, apiValue] of Object.entries(fileDataJson.data.objects)) {
         for (let [apiInnerKey, apiInnerValue] of Object.entries(apiValue)) {
           if(apiInnerKey === 'url'){
-            console.log(`${apiInnerKey}: ${apiInnerValue}`);
-    
             let urlPath = apiInnerValue.split('/metadata')[0];
     
             let lastIndex = urlPath.lastIndexOf('/');
@@ -39,9 +34,9 @@ result.forEach(apiMetaFile => {
     
             let downloadPath = apiMetaFile.split('/metadata.json')[0] + '/' + code + '.json';
             
-            // (async () => {
-            //   fs.writeFileSync(downloadPath, await download(apiInnerValue));
-            // })();
+            (async () => {
+              fs.writeFileSync(downloadPath, await download(apiInnerValue));
+            })();
           }
         }
       }
