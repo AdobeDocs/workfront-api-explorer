@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-index-md",
     "path": "/",
-    "result": {"pageContext":{"frontmatter":{"frameSrc":"/page-api-explorer.html","frameHeight":"calc(100vh - 436.5px)"}}},
+    "result": {"pageContext":{"frontmatter":{"frameSrc":"https://developersupport.workfront.com/page-api-explorer.html","frameHeight":"600px"}}},
     "staticQueryHashes": ["915530536"]}
