@@ -1,4 +1,4 @@
 ---
-frameSrc: /page-api-explorer.html
-frameHeight: calc(100vh - 436.5px)
+frameSrc: https://developersupport.workfront.com/page-api-explorer.html
+frameHeight: 600px
 ---
