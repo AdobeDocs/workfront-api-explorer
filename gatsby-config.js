@@ -20,5 +20,5 @@ module.exports = {
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/workfront/api-explorer'
+  pathPrefix: process.env.PATH_PREFIX || '/workfront/api-explorer/'
 };
