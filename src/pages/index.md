@@ -1,4 +1,5 @@
 ---
-frameSrc: https://developersupport.workfront.com/page-api-explorer.html
-frameHeight: 600px
+layout: none
 ---
+
+<iframe src="https://developersupport.workfront.com/page-api-explorer.html"/>
