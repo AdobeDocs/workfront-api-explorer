@@ -1,0 +1,24 @@
+{
+  "total": 2,
+  "offset": 0,
+  "limit": 2,
+  "data": [
+    {
+      "page": "/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/57922?v=4",
+        "https://avatars.githubusercontent.com/u/55804872?v=4"
+      ],
+      "lastUpdated": "2/10/2026"
+    },
+    {
+      "page": "/config",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "2/10/2026"
+    }
+  ],
+  ":type": "sheet"
+}
